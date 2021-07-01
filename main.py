@@ -375,7 +375,64 @@
 #     else:
 #         continue
 
+# ichma ich joylashgan for
+# mevalar=["olma", "anor", "gilos"]
+# for meva in mevalar:
+#     for harf in meva:
+#         print(harf)
+#     print("\n")
 
+# ichma ich joylashgan for
+# mashinalar=["Nexia", "Tico", "Damas"]
+# for mashina in mashinalar:
+#     for harf in mashina:
+#         print(harf)
+#     print("\n")
 
+# 2. Berilgan sonlar to'plami ichida eng kichigini toping:
+# sonlar=[2, 8, 4, 5, 4, 1, 0, 9]
+# kichikson=sonlar[0]
+# for son in sonlar:
+#     if kichikson>son:
+#         kichikson=son
+# print(kichikson)
 
+# 2. Berilgan sonlar to'plami ichida eng kattasini toping:
+# sonlar=[2, 8, 4, 5, 4, 1, 0, 9]
+# kattason=sonlar[0]
+# for son in sonlar:
+#     if kattason<son:
+#         kattason=son
+# print(kattason)
 
+# 2. Berilgan sonlar to'plami ichida eng kattasini toping:
+# sonlar=[2, 8, 4, 5, 4, 1, 0, 9]
+# kattason=sonlar[0]
+# print(max(sonlar))
+
+# 2. Berilgan sonlar to'plami ichida eng kichigini toping:
+# sonlar=[2, 8, 4, 5, 4, 1, 0, 9]
+# kichikson=sonlar[0]
+# print(min(sonlar))
+
+# 3. Berilgan sonlar to'plami ichida eng kichigini toping:
+# sonlar=[2, 8, 4, 5, 4, 1, 0, 9]
+# for index in range(len(sonlar)):
+#     for key in range(len(sonlar)):
+#         if sonlar[index]<sonlar[key]:
+#             sonlar[index] = sonlar[key]+sonlar[index]
+#             sonlar[key]=sonlar[index]-sonlar[key]
+#             sonlar[index] = sonlar[key]-sonlar[index]
+#             print(sonlar)
+# print(sonlar)
+
+# berilgan massivda element nechaga teng bo\lsa o'shancha chop eting
+sonlar=[2, 1, 6, 7]
+for i in sonlar:
+    for sonlar in range(i):
+        print(i)
+
+# berilgan massivda element nechaga teng bo\lsa o'shancha chop eting
+# sonlar=[2, 1, 6, 7]
+# for i in sonlar:
+#     print(str(i)*int(i))
