@@ -1,0 +1,157 @@
+# """ Ro'yhatlar (Ko'p o'lchovli ro'yhatlar) """
+# numbers = [1, 2, 3, 4, 5, 'ha', True]
+#
+# # Ro'yhatni o'zi ham ro'yhat elementi bo'la oladimi?
+# # Javob: ha
+#
+# """ chop etish """
+# matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+# list1 = [[[1, 2, 3], 2, 3], [4, 5, 6]]
+#
+# for element in matrix:
+#     print(element)
+#
+# for element in matrix:
+#     for raqam in element:
+#         print(raqam)
+#
+# # satrlar ham massiv bo'la oladi:
+#
+# satr = "O'zbekiston"
+#
+# for harf in satr:
+#     print(harf)
+#
+# gap = ["Men", "Pythonda", "ishlayapman"]
+# for suz in gap:
+#     print(suz)
+#
+# for suz in gap:
+#     for harf in suz:
+#         print(harf)
+
+""" indekslar bilan ishlash """
+
+# numbersList = [[1, 2, 3], [4, 5, 6], [7, 8, [1, 2, 3, 4, [5, 6]]]]
+# print(numbersList[2][0])
+# print(numbersList[2][2][4][1])
+
+""" ko'p o'lchovli ro'yhatni yaratishni maxsus usullari """
+# numbersList = [[[1, 2, 3] * 1] * 3] * 2
+# print(numbersList)
+#
+# numbersList = [[0] * 4 for i in range(4)]
+# print(numbersList)
+
+""" 1 - masala. 10 raqamini indeksi orqali print qiling """
+
+# numbersList = [[1, 2, 3, 4], [0, [1, 2, [4, 5, [10, 11]], 4], 5], 12]
+# print(numbersList[1][1][2][2][0])
+
+# 4 masala 3x3 matritsa tuzib bering.
+# m1=[[1,2],[3,4]]
+# m2=[[4,5],[6,7]]
+# a=m1[0][0]+m2[0][0]
+# b=m1[0][1]+m2[0][1]
+# c=m1[1][0]+m2[1][0]
+# d=m1[1][1]+m2[1][1]
+# mas=[[a,b], [c,d]]
+# print(mas)
+
+#1-masala:
+# nambersList = [[1,5],[2,8]]
+# nambersList2=[[4,5],[8,1]]
+# print([nambersList[0][0]+nambersList2[0][0],nambersList[0][1]+nambersList2[0][1]],[nambersList[1][0]+nambersList2[1][0],nambersList[1][1]+nambersList2[1][1]])
+
+# 3-masala 2ta 2x2 matritsa tuzib ularni qo'shing va jaxobini yangi matritsaga o'zlashtirib print qiling
+# A1=[[1,2],[3,4]]
+# A2=[[5,6],[7,8]]
+# B=[[[], []], [[], []]]
+# B[0][0]=A1[0][0]+A2[0][0]
+# B[0][1]=A1[0][1]+A2[0][1]
+# B[1][0]=A1[1][0]+A2[1][0]
+# B[1][1]=A1[1][1]+A2[1][1]
+
+# for i in range(3):
+#     for j in range(3):
+#         for k in range(3):
+#             B=[[i],[j],[k]]
+# print(B)
+
+# for i in range(3):
+#     for j in range(2):
+#         B=[[i],[j]]
+# print(B)
+
+# 3-masala 3x3 matritsa tuzib ularni qo'shing va jaxobini yangi matritsaga o'zlashtirib print qiling
+# B=[[[],[],[]], [[],[],[]], [[],[],[]]]
+# for i in range(3):
+#     for j in range(3):
+#         B[i][j]=int(input(f"B[{i}][{j}]="))
+# print(B)
+
+# 5-masala 3x3 matritsa har bir elementini alohida chiqaaring
+# A=[[1,2,3],[4,5,6],[7,8,9]]
+# for matrix in A:
+#     for index in matrix:
+#         print(index)
+
+# # 2-usul
+# for i in range(3):
+#     for j in range(3):
+#         a=[[i][j]]
+#         print(a)
+
+# # 6-masala 2x2 ro'yxat berilgan ana shu ro\yxatni 1-o'lchovli ro'yxatga o'zlashtiring
+# a=[[1,2],[3,4]]
+# b=a[0]+a[1]
+# print(b)
+
+# 2-usul
+# c=[]
+# a=[[1,2],[3,4]]
+# for j in a:
+#     for g in j:
+#         c.append(g)
+# print(c)
+
+# a=[1,2,3], [4,5,6], [7,8,9]
+# print(a[0])
+# print(a[1])
+# print(a[2])
+
+# 2. 3x3 matritsa berilgan for yordamida ustunlarni satrga satrlarni ustunga almashtiring
+
+
+# ikki o\chovli matritsani juft elementlarini chiqarib bering
+# a=[[1,2], [3,4]]
+# for j in a:
+#     for g in j:
+#         if g%2==0:
+#             print(g)
+
+# ikki o\chovli matritsani juft elementlarini chiqarib bering
+# c=[]
+# a=[[1,2], [3,4]]
+# for j in a:
+#     for g in j:
+#         if g%2==0:
+#             c.append(g/2)
+#         else:
+#             c.append(g * 2)
+# print(c)
+
+a=[[1,2], [3,4]]
+print(a)
+for i in range(2):
+    for j in range(2):
+        if a[i][j]%2==0:
+            a[i][j]=int(a[i][j]/2)
+        elif a[i][j]%2==1:
+            a[i][j]=int(a[i][j]*2)
+print(a)
+
+# masala. Uch o\lchovli masala berilgan uni diagonali elementlarini chiqaring
+
+a=[1,2,3], [4,5,6], [7,8,9]
+print(a)
