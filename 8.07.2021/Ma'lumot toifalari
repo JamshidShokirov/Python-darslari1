@@ -1,0 +1,193 @@
+# uquvchi={
+#     "ismi": "Alijon",
+#     "yoshi": 14,
+#     "manzili": "Xayrobod"
+# }
+# print(uquvchi)
+
+# keys metodi
+# uquvchi={
+#     "ismi": "Alijon",
+#     "yoshi": 14,
+#     "manzili": "Xayrobod"
+# }
+# print(uquvchi.keys())
+#
+# uquvchi={
+#     "ismi": "Alijon",
+#     "yoshi": 14,
+#     "manzili": "Xayrobod"
+# }
+# print(uquvchi.values())
+#
+#
+#
+# shaxslar=[
+#     {
+#     "ismi": "Valijon",
+#     "yoshi": 25,
+#     },
+#     {"ismi": "Solijon",
+#     "yoshi": 17,
+#      },
+#     {"ismi": "Xolijon",
+#     "yoshi": 27,
+#      },
+# ]
+# for shaxs in shaxslar:
+#       if shaxs["yoshi"]>20:
+#         print(shaxs["ismi"])
+
+
+#
+# Talaba={
+#     "ismi": "Karimjon",
+#     "kursi": 14,
+#     "bahosi": 5,
+# }
+# print(Talaba.keys())
+# print(Talaba.values())
+#
+# shaxslar={
+#     "ismi": "Valijon",
+#     "yoshi": 20,
+#     "kasbi": "O'qituvchi"
+# }
+# if "yoshi">20
+# print(shaxslar.values("yoshi"))
+#
+# shaxslar = [
+#     {
+#         "ism": "Shoxzod",
+#         "yoshi": 20
+#     },
+#     {
+#         "ism": "Oybek",
+#         "yoshi": 22
+#     },
+# {
+#         "ism": "Bunyod",
+#         "yoshi": 22
+#     },
+#     {
+#         "ism": "Madinabonu",
+#         "yoshi": 13
+#     }
+# ]
+#
+# for shaxs in shaxslar:
+#     if shaxs["yoshi"] > 20:
+#         print(shaxs["ism"])
+
+# element o'zgartirish
+# shaxs={
+#     "ismi": "Valijon",
+#     "yoshi": 20,
+#     "kasbi": "O'qituvchi"
+# }
+# shaxs["ism"]="Otabek"
+# print(shaxs)
+
+# talaba={
+#     "ismi": "Valijon",
+#     "yoshi": 20,
+# }
+#
+# yil=int(input("necha yil o'tdi->"))
+# talaba["yoshi"]=talaba["yoshi"]+yil
+# print(talaba)
+
+# #  oddiy yangi element e'lon qilish
+# shaxs={
+#     "ismi": "Valijon",
+#     "yoshi": 20,
+#     "kasbi": "O'qituvchi"
+# }
+# shaxs["millati"]="o'zbek"
+# print(shaxs)
+# # update bir nechta elemen qo'shish
+# shaxs.update({"manzili": "Jizzax", "Tel nomeri": "91 564 37 98"})
+# print(shaxs)
+
+# #  ortiqcha elementni o'chirish
+# shaxs={
+#     "ismi": "Valijon",
+#     "yoshi": 20,
+#     "kasbi": "O'qituvchi",
+#     "millati": "o'zbek"
+# }
+# shaxs.pop("millati")
+# print(shaxs)
+
+# # 2-usul
+# shaxs={
+#     "ismi": "Valijon",
+#     "yoshi": 20,
+#     "kasbi": "O'qituvchi",
+#     "millati": "o'zbek"
+# }
+# shaxs.popitem()
+# print(shaxs)
+
+# # del -> del dict[key]- bunda o'sha key ga mos element o'chadi
+# shaxs={
+#     "ismi": "Valijon",
+#     "yoshi": 20,
+#     "kasbi": "O'qituvchi",
+#     "millati": "o'zbek"
+# }
+# del shaxs["yoshi"]
+# print(shaxs)
+# del shaxs
+
+# 4-masala
+# shaxs={
+#     "ismi": "Valijon",
+#     "yoshi": 10,
+#     "O'quvchi": True
+# }
+# yil=int(input("yil->"))
+# shaxs["yoshi"]=shaxs["yoshi"]+yil
+#     If i in shaxs["yoshi"]<18:
+# print(False)
+# del shaxs["yoshi"]
+# print(shaxs)
+# #
+# # 1 - masala yoshi degan key bormi yo'qmi
+# for i in talaba:
+#     if i == "yosh":
+#         print("bor")
+#         break
+# else:
+#     print("yo'q")
+
+# 1 - masala yoshi degan key bormi yo'qmi
+# for i in talaba:
+#     if i == "yosh":
+#         print("bor")
+#         break
+# else:
+#     print("yo'q")
+
+EnUz = {
+  "i": "men",
+  "you": ["sen", "siz"],
+  "he": "u",
+  "she": "u",
+  "it": "u",
+  "we": "biz",
+  "they": "ular",
+  "teacher": "o'qituvchi",
+  "pupil": "o'quvchi",
+  "hello": "salom",
+  "bye": "xayir",
+  "world": "dunyo",
+  "uzbekistan": "O'zbekiston"
+}
+suz=input("inglizcha so'z kiriting")
+suz=suz.lower()
+if suz in EnUz.keys():
+    print(EnUz[suz])
+else:
+    print("Bunday suz lug'atda yuq")
+
