@@ -1,0 +1,198 @@
+# def salom():
+#     print("salom")
+#
+# salom()
+#
+# def salom(name):
+#     print("salom")
+#
+# salom("name")
+
+# def salom(name):
+#     print(f"salom {name}")
+# ism=input("ismingizni kiriting")
+# salom(ism)
+
+# sonning ikkilangani
+# def kupaytma(name):
+#     print(f"kupaytma {name}")
+# son=int(input("sonni kiriting="))
+# kupaytma(son*2)
+
+""" ko'p parametrli funksiya"""
+# def tuliq_ism(ism, familiya):
+#     tuliq=ism+' '+familiya
+#     print(tuliq)
+#
+# tuliq_ism("Alijon", "valiyev")
+
+# """ *args - parametrlar tuplami"""
+# def ismlar_ruyxati(*ism):
+#     print(ism)
+#
+# ismlar_ruyxati("Ali", "Vali", "Soli", "Xoli")
+
+""" *args - parametrlar tuplami"""
+# def fanlar_ruyxati(*fan):
+#     print(fan)
+#
+# fanlar_ruyxati("Kimyo", "Fizika", "Tarbiya", "Informatika")
+
+"""" :keyword - kalit so'z"""
+# def tuliq_ism(ism, familiya):
+#     print(f"{ism} {familiya}")
+#
+# tuliq_ism(ism="Alijon", familiya="Valiyev")
+
+# """" :keyword - kalit so'z"""
+# def tuliq_ism(ism, familiya):
+#     print(f"{ism} {familiya}")
+#
+# firstname=input("ism : ")
+# lastname=input("familiya : ")
+# tuliq_ism(ism=firstname, familiya=lastname)
+
+# """" many keyword ***args- kalit so'zlar tuplami"""
+# def uquvchi(**x):
+#     print(x)
+#
+# uquvchi(ismi="Xoli", yoshi=18, millati="O'zbek")
+
+# """" many keyword ***args- kalit so'zlar tuplami"""
+# def uquvchi(**x):
+#     print(type(x))
+#
+# uquvchi(ismi="Xoli", yoshi=18, millati="O'zbek")
+# uquvchi(ismi="Xoli", yoshi=18, millati="O'zbek")
+
+# """" many keyword ***args- kalit so'zlar tuplami"""
+# def uquvchi(**x):
+#     print(x)
+#
+# malumot=dict({})
+# malumot["ismi"]=input("ismi ")
+# malumot["yoshi"]=int(input("yoshi "))
+# malumot["millati"]=input("millati ")
+# print(malumot)
+# uquvchi(malumot)
+
+# def myfunction(rang="qora"):
+#     print(f"men yoqtirgan rang: {rang} ")
+#
+# myfunction("oq")
+# myfunction()
+
+""" ro'yxat argument sifatida"""
+# def uquvchilar(x):
+#     for i in x:
+#         print(i)
+#
+# uquvchi=[]
+# k=int(input("o'quvchilar sonini kiriting: "))
+# for i in range(k):
+#     ism=input(f"{i+1} - o'quvchi ismi")
+#     uquvchi.append(ism)
+# uquvchilar(uquvchi)
+
+# """ ro'yxat argument sifatida"""
+# def uquvchilar(x):
+#     for i in x:
+#         print(i)
+#
+# uquvchi=["Ali", "Vali", "Soli"]
+# uquvchilar(uquvchi)
+
+# """ pass"""
+# def main():
+#     pass
+# main()
+# print("salom")
+
+""" :return"""
+
+# a=2
+# b=1
+# # yig'indisini hisoblash
+# def yigindi(a, b):
+#     return a+b
+#
+# print(yigindi(a,b))
+
+# a=2
+# b=1
+# c=3
+# # yig'indisini hisoblash
+# def urta_a(a, b,c):
+#     return (a+b+c)/3
+#
+# print(urta_a(a,b,c))
+
+# def f(x):
+#     if x==0:
+#         return 0
+#     elif x%2==0:
+#         return 1
+#     elif x%2==1:
+#         return -1
+#
+# x=int(input("x = "))
+# y=f(x)
+# print(y)
+
+# def katta(a,b):
+#     if a>b:
+#         return a
+#     else:
+#         return b
+# print(katta(3, 2))
+
+
+# def masala(x):
+#     if x%2==0:
+#         return 0
+#     else:
+#         return 1
+# def amal(x, key):
+#     if key==0:
+#         return x*2
+#     else:
+#         return x*4
+#
+# def modul(x):
+#     k=masala(x)
+#     return amal(x, k)
+# print(modul(1))
+
+# def PowerA3(n):
+#     return n**3
+#
+# A=1.1
+# B=2.2
+# C=3.3
+#
+# D=1
+# E=2
+# print(PowerA3(A))
+# print(PowerA3(B))
+# print(PowerA3(C))
+# print(PowerA3(D))
+# print(PowerA3(E))
+
+def PowerA3(*n):
+    k = []
+    for i in range(len(n)):
+        k.append(n[i] ** 3)
+    return k
+
+
+A = 1.1
+B = 2.2
+C = 3.3
+
+D = 1
+E = 2
+
+a = PowerA3(A, B, C, D, E)
+
+for i in a:
+    print(i)
