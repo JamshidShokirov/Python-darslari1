@@ -1,0 +1,171 @@
+# # # rekursiya - o'ziga murojaat qiladigan funksiya ekan.
+#
+# # 1 - masala. k dan n gacha bo'lgan natural sonlarni ekranga chiqarish:
+#
+# def birDanNgacha(k, n):  # parameter kiradi
+#     if n == k:
+#         print(f"{k}, {n}")
+#     else:
+#         print(f"{k}, {n}")
+#         birDanNgacha(k + 1, n)  # rekursiya
+#
+#
+# birDanNgacha(1, 10)
+#
+# # 2 - masala. n dan 1 gacha teskari tartibda:
+#
+#
+# def n_dan_1_gacha(n):
+#     print(n)
+#     n_dan_1_gacha(n - 1)
+#
+#
+# n_dan_1_gacha(10)
+#
+# # 3 - masala. faktorial
+# def fakt(n):
+#     if n == 1 or n == 0:
+#         return 1
+#     else:
+#         return n * fakt(n - 1)  # 5 * 4 * 3 * 2 * 1
+#
+#
+# print(fakt(0))
+#
+# # 4 - masala.
+# def yigindi(n):
+#     if n == 1:
+#         return 1
+#     else:
+#         return n + yigindi(n - 1)  # 5 + 4 + 3 + 2 + 1
+#
+#
+# print(yigindi(5))
+#
+# # 5 - masala. 1 dan gacha bo'lgan sonlarni teskari tartibda chiqarish
+# def yigindi_toq(n):
+#     if n == 1:
+#         print(n)
+#     else:
+#         if n % 2 == 0:
+#             n = n - 1
+#         print(n)
+#         yigindi_toq(n - 2)
+#
+#
+# print(yigindi_toq(7))
+
+# 6 - masala. fibonachi sonlarini n - chi xadini topshish:
+# 1, 1, 2, 3, 5, 8 ...
+a = []
+
+
+# def fib(n):
+#     if n == 1 or n == 2:
+#         return 1
+#     else:
+#         return fib(n - 1) + fib(n - 2)
+#
+#
+# def fib_hadlari(n):
+#     for i in range(1, n + 1):
+#         print(fib(i), end=" ")
+#
+#
+# fib_hadlari(9)
+
+
+# 6-masala. Fibonachi sonlarini n ta hadini chiqaring
+# def fibonacci(n):
+#     a = 0
+#     b = 1
+#     if n == 0:
+#         return a
+#     else:
+#
+#         for i in range(1, n):
+#             c = a + b
+#             #1,2,3,5,8,13
+#             print(c)
+#             a = b
+#             b = c
+#         return b
+# print(fibonacci(9))
+
+# Syntax error
+# print("hello)
+
+# IdentationError
+# for i in range(5):
+# print(i)
+
+# NameError
+# try:
+# ism="Jamshid"
+# print(ims)
+# except:
+# print("xato -> NameError")
+
+# ValueError
+# try:
+#     x="2.3"
+#     int(x)
+# except:
+#     print("valueError")
+
+""""finally -> try except jarayoni tugaganidan so'ng ishlatiladi"""
+# y=0
+# try:
+#     y=0
+#     print("Vali")
+# except:
+#     y+=1
+#     print("try dagi nimadir xato")
+# finally:
+#     if y==0:
+#         print("dasturda xato yo'q")
+#     else:
+#         print("dasturda xato bor")
+
+# ism=input("ismingizni kiriting:")
+# try:
+#     a="Salom"+" "+ism
+#     print(a)
+# except:
+#     print("Xatolik bor")
+
+# """ raise -> xatolarni keltirib chiqarish"""
+# try:
+#     n=int(input("n= "))
+#     if n!=1:
+#         raise Exception()
+# except:
+#     print("xato")
+# else:
+#     print("xato yuq")
+
+# """ raise -> xatolarni keltirib chiqarish"""
+# try:
+#     n=int(input("n= "))
+#     if n<0:
+#         raise Exception()
+# except:
+#     print("xato")
+# else:
+#     print("xato yuq")
+
+# 3-masala. x sonini kiritinf agar son juft bo\lsa xato keltirib chiqaring va istisno qiling
+# hamda juft son kiritilmasa to'g'ri son kirirtilganligi haqida xabar bering va finally ni ham ishlating
+
+import sys
+try:
+    x=int(input("x= "))
+    if x%2==0:
+        raise Exception("Siz juft son kiritdingiz")
+except:
+    print(sys.exc_info()[1])
+else:
+    print("xato yuq")
+finally:
+    print("dastur tugadi")
+
