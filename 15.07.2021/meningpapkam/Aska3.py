@@ -1,0 +1,2 @@
+import Aska
+Aska.salom()

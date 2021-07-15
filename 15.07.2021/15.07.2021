@@ -1,0 +1,136 @@
+import datetime
+from math import *
+import math
+
+# O'zimiz yaratgan modulni import qilish
+# import mymodule
+# print(mymodule.y)
+
+# 2-usul
+# from mymodule import*
+# print(x, y)
+
+# """Boshqa papkalardagi modullarni import qqilish"""
+# from meningpapkam import mymodul1
+# mymodul1.salom()
+#
+# """ boshqa papkalardagi modullarni import qilish """
+# from examp2 import sonlar
+# sonlar
+
+# """ boshqa papkalardagi modullarni import qilish """
+# from Maktab import Maktab17
+# print(Maktab17.qushish(2,5))
+# print(Maktab17.kupaytirish(2,5))
+# print(Maktab17.ayirish(2,5))
+# print(Maktab17.bulish(2,5))
+#
+#
+# """ 2- usul boshqa papkalardagi modullarni import qilish """
+# from Maktab import Maktab17 as mk
+# print(mk.qushish(2,5))
+# print(mk.kupaytirish(2,5))
+# print(mk.ayirish(2,5))
+# print(mk.bulish(2,5))
+
+# """ dir funksiyasi bu moduldagi barcha obyektlarni qaytaradigan funksiya"""
+# from Maktab import Maktab17
+# import math
+# dir(dir(math))
+# print(dir(Maktab17))
+
+# # uzbekchalashtirish
+# import uzbekcha as uz
+# uz.chiqar("Salom")
+
+# import datetime as dt
+# while True:
+#     print(datetime.datetime.now())
+
+# print(dt.datetime.now().year)
+# vaqt=dt.datetime.now()
+# print(vaqt.year)
+# print(vaqt.month)
+# print(vaqt.day)
+# print(vaqt.weekday())
+# print(vaqt.hour)
+# print(vaqt.minute)
+# print(vaqt.second)
+# print(vaqt.microsecond)
+#
+# t=dt.datetime.now()
+# def vaqt(t):
+#     print(f"soat: {t.hour}:{t.minute} buldi")
+# vaqt(t)
+
+# """ vaqtni belgilash"""
+#
+# x=dt.datetime(2021, 7, 15)
+# print(x)
+
+# # """ vaqtni belgilash"""
+# x=dt.datetime(2021, 7, 15, 2, 1, 3)
+# print(x.strftime("%a"))
+# print(x.strftime("%A"))
+# print(x.strftime("%B"))
+# print(x.strftime("%b"))
+#
+# import datetime as dt
+# x = dt.datetime.now().second
+# while True:
+#     print(dt.datetime.now().second - x)
+#     if x + 5 == dt.datetime.now().second:
+#         print("salom")
+#         x = dt.datetime.now().second
+#         break
+
+import datetime as dt
+
+n = int(input("Savollar sonini kiriting: "))
+testVaqti = 0
+testlar = []
+testSavoli = {
+    "savol": "",
+    "javoblar": [
+        '',
+        '',
+        ''
+    ],
+    "kalit": "A"
+}
+
+for i in range(n):
+    print(i + 1, " - savolni tuzamiz:")
+    print("Savolni kiriting: ", end=" ")
+    testSavoli["savol"] = input()
+    for j in range(3):
+        print(f"Javob {j + 1} ni kiriting: ", end=' ')
+        testSavoli["javoblar"][j] = input()
+    print("to'g'ri javob indeksini kiriting yani A, B, C")
+    testSavoli["kalit"] = input()
+    testSavoli["kalit"] = testSavoli["kalit"].upper()
+    testShablon = testSavoli.copy()
+    testlar.append(testShablon)
+testVaqti = int(input("Test vaqtini kiriting (sekund): "))
+print("Tayyor!!!")
+
+print("Boshlash uchun ixtiyoriy klavishni bosing")
+vaqt = dt.datetime.now().second
+z = input()
+tugri_javoblar = 0
+print("boshlandi omad!!!")
+
+while True:
+    if int(vaqt + testVaqti) == int(dt.datetime.now().second):
+        print("vaqt tugadi")
+        break
+    for i in range(n):
+        print(i + 1, " - savol. ", testlar[i]['savol'])
+        for j in range(3):
+            print(f"{j + 1} {testlar[i]['javoblar'][j]}")
+        k = input("tog'ri javobni kiriting(A,B,C): ")
+        if k == testlar[i]["kalit"]:
+            tugri_javoblar += 1
+
+    print(f"siz {tugri_javoblar} ta to'g'ri ishlagansiz!")
+
