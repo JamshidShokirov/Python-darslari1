@@ -201,3 +201,12 @@ for i in range(n):
 
 for xodim in xodimlar:
     xodim.gap()
+
+    # uquvchilar = []
+    #
+    # n = int(input("O'quvchilar sonini kiriting: "))
+    # for i in range(n):
+    #     uquvchilar.append(input(f"{i + 1}) ismi:"))
+    #
+    # for i in uquvchilar:
+    #     print(i)
